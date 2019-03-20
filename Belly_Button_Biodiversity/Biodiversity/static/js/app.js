@@ -39,13 +39,13 @@ function buildGauge(WFREQ) {
 
 // Trig to calc meter point
   var degrees = 180 - level,
-    radius = .3;
+    radius = .7;
   var radians = degrees * Math.PI / 180;
   var x = radius * Math.cos(radians);
   var y = radius * Math.sin(radians);
 
 // Path: may have to change to create a better triangle
-  var mainPath = 'M -.0 -0.025 L .0 0.025 L ',
+  var mainPath = 'M -.0 -0.05 L .0 0.05 L ',
     pathX = String(x),
     space = ' ',
     pathY = String(y),
@@ -55,7 +55,7 @@ function buildGauge(WFREQ) {
   var data = [{
     type: 'scatter',
     x: [0], y: [0],
-    marker: { size: 20, color: '850000' },
+    marker: { size: 25, color: '850000' },
     showlegend: false,
     name: 'Wash Frequency',
     text: level,
@@ -69,11 +69,11 @@ function buildGauge(WFREQ) {
     textinfo: 'text',
     textposition: 'inside',
     marker: { colors:
-      ['rgba(14, 127, 0, .5)', 'rgba(110, 154, 22, .5)',
+      [ 'rgba(0, 105, 11, .5)', 'rgba(10, 120, 22, .5',
+        'rgba(14, 127, 0, .5)', 'rgba(110, 154, 22, .5)',
         'rgba(170, 202, 42, .5)', 'rgba(202, 209, 95, .5)',
         'rgba(210, 206, 145, .5)', 'rgba(232, 226, 202, .5)', 
-        '#73d26f', '#81e07f', '#90ee90',
-        'rgba(255, 255, 255, 0)'
+        'rgba(240, 230, 215, .5', 'rgba(255, 255, 255, 0)'
       ]},
    
       // ['#008000', '#228d1b',
